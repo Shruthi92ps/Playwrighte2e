@@ -1,0 +1,33 @@
+TC01:
+1.login to url "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+2.enter username as "ADMIN"
+3.enter password as "admin123"
+4.click on login
+5.Validate dashboard 
+
+TC02:
+1.login to url "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+2.enter username as "ADMIN"
+3.enter password as "admin123"
+4.click on login
+5.click on search 
+6.enter Claim and enter.
+7.Verify Claim tab is opened
+
+
+TC03:
+1.login to url "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+2.enter username as "ADMIN"
+3.enter password as "admin123"
+4.click on login
+5.Click on myinfo in leftside bar
+6.validate myinfo page is opened 
+
+
+TC04:
+1.login to url "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+2.enter username as "ADMIN"
+3.enter password as "admin123"
+4.click on login
+5.Click on myinfo in leftside bar
+6.enter Employee Full Name as "shruthi"
