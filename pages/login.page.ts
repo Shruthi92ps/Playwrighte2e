@@ -4,7 +4,13 @@ export class LoginPage {
   constructor(private readonly page: Page) {}
 
   async goto(): Promise<void> {
-    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    const url = process.env.OHRM_URL;
+
+    if (!url) {
+      throw new Error('OHRM_URL is not defined');
+    }
+
+    await this.page.goto(url);
   }
 
   async login(username: string, password: string): Promise<void> {

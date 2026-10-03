@@ -8,6 +8,11 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      # Inject secrets securely
+      OHRM_USERNAME: ${{ secrets.OHRM_USERNAME }}
+      OHRM_PASSWORD: ${{ secrets.OHRM_PASSWORD }}
+      OHRM_URL: ${{ secrets.OHRM_URL }}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4

@@ -13,8 +13,15 @@ type AppFixtures = {
 export const test = base.extend<AppFixtures>({
   dashboardPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
+    const username = process.env.OHRM_USERNAME;
+    const password = process.env.OHRM_PASSWORD;
+
+    if (!username || !password) {
+      throw new Error('OHRM_USERNAME and OHRM_PASSWORD environment variables must be set');
+    }
+
     await loginPage.goto();
-    await loginPage.login('ADMIN', 'admin123');
+    await loginPage.login(username, password);
     await use(new DashboardPage(page));
   },
   claimPage: async ({ dashboardPage }, use) => {
